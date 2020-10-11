@@ -127,6 +127,7 @@ if(isset($_POST["updateabout"]))
 if(isset($_POST["cancelled"]))
 {
 	header("Location:adminentered.php");
+	mysqli_close($con);
 }
 ?>
 <div class="topheader">
@@ -160,7 +161,21 @@ if(isset($_POST["cancelled"]))
 </center>
 <center>
 <textarea class="textbox" rows="13" cols="102" name="updateaboutpage">
-
+<?php
+	$pname='About Us';
+	$sql = "SELECT * from pages where (PageName='$pname')";
+	$host = 'localhost';
+	$user = 'root';
+	$pass = '';
+	$con=mysqli_connect($host, $user, $pass);
+	mysqli_select_db($con,'dbms');
+	$res = mysqli_query($con,$sql);
+	while($value=mysqli_fetch_array($res))
+	{
+			echo $value['detail'];
+		
+	}
+?>
 </textarea>
 <br><br>
 <button  class="loginbutton" type="submit" name="updateabout" >UPDATE</button>

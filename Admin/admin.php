@@ -61,7 +61,7 @@ font-size:20px;
 
 session_start();
 session_unset();    
-session_destroy();
+
 ?>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
@@ -81,20 +81,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	if($er==0)
 	{
 		$username=$_POST["adminname"];
-		$password=md5($_POST["adminpwd"]);
+		$password=$_POST["adminpwd"];
 		$sql = "SELECT * from admin where (UserName= '$username' and Password='$password')";
 		$host = 'localhost';
 		$user = 'root';
 		$pass = '';
+		$db='dbms';
 		$con=mysqli_connect($host, $user, $pass);
-		mysqli_select_db($con,'dbms');
-		$res = mysqli_query($con,$sql);
-		if(mysqli_num_rows($res) > 0)
+		mysqli_select_db($con,$db);
+		$query = mysqli_query($con,$sql);
+		if(mysqli_num_rows($query) > 0)
 		{
 		
-			echo"<script>alert('Successfully Loggedin')</script>";
-			session_start();
-			$_SESSION['LAST_ACTIVITY']=time();
+			echo"<script>alert('Successfully Loggedin')</script>";			
 			header('Location:adminentered.php');
 		
 		}

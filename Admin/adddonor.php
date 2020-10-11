@@ -142,7 +142,7 @@ font-size:20px;
 <ul>
 <li class="projectname">BloodBank Management System</li>
 <li class="inline"><a class="links" href="admin.php" target="_blank">Admin</a></li>
-<li class="inline"><a class="links" href="http://localhost/iwp-project/About.php">About</a></li>
+<li class="inline"><a class="links" href="http://localhost/iwp-project/About.html">About</a></li>
 <li class="inline"><a class="links" href="http://localhost/iwp-project/whybecomeadonor.html">Why Become Donor</a></li>
 <li class="inline"><a class="links" href="http://localhost/iwp-project/becomeadonor.html" >Become a Donor</a></li>
 <li class="inline"><a class="links" href="http://localhost/iwp-project/searchblood.html">Search Blood</a></li>

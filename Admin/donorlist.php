@@ -75,6 +75,7 @@ bottom:0;
 .leftmargin{
 	margin-top:100px;
 	margin-left:230px;
+	padding-left:100px;
 }
 .leftmenu a:hover{
 	color: white;
@@ -200,7 +201,7 @@ padding-bottom:50px;
 <li class="projectname">BloodBank Management System</li>
 <li class="inline"><a class="links" href="admin.php" target="_blank">Admin</a></li>
 <li class="inline"><a class="links" href="http://localhost/iwp-project/About.html">About</a></li>
-<li class="inline"><a class="links" href="http://localhost/iwsp-project/whybecomeadonor.html">Why Become Donor</a></li>
+<li class="inline"><a class="links" href="http://localhost/iwp-project/whybecomeadonor.html">Why Become Donor</a></li>
 <li class="inline"><a class="links" href="http://localhost/iwp-project/becomeadonor.html" >Become a Donor</a></li>
 <li class="inline"><a class="links" href="http://localhost/iwp-project/searchblood.html">Search Blood</a></li>
 <li class="inline"><a class="links" href="http://localhost/iwp-project/contactus.php">Contact Us</a></li>
@@ -296,7 +297,7 @@ if (isset($_POST["search_blood"])) {
 <?php
 	if(isset($_POST["deldonor"]))
 	{
-		validatesession();
+		
 		if(!empty($_POST["donorid"]))
 		{
 			$host = 'localhost';

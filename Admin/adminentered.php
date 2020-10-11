@@ -100,11 +100,11 @@ bottom:0;
 <ul>
 <li class="projectname">BloodBank Management System</li>
 <li class="inline"><a class="links" href="admin.php" target="_blank">Admin</a></li>
-<li class="inline"><a class="links" href="http://localhost/project/about.php">About</a></li>
-<li class="inline"><a class="links" href="http://localhost/project/whybecomeadonor.php">Why Become Donor</a></li>
-<li class="inline"><a class="links" href="http://localhost/project/becomeadonor.html" >Become a Donor</a></li>
-<li class="inline"><a class="links" href="http://localhost/project/searchblood.html">Search Blood</a></li>
-<li class="inline"><a class="links" href="http://localhost/project/contactus.php">Contact Us</a></li>
+<li class="inline"><a class="links" href="http://localhost/iwp-project/About.html">About</a></li>
+<li class="inline"><a class="links" href="http://localhost/iwp-project/whybecomeadonor.html">Why Become Donor</a></li>
+<li class="inline"><a class="links" href="http://localhost/iwp-project/becomeadonor.html" >Become a Donor</a></li>
+<li class="inline"><a class="links" href="http://localhost/iwp-project/searchblood.html">Search Blood</a></li>
+<li class="inline"><a class="links" href="http://localhost/iwp-project/contactus.php">Contact Us</a></li>
 <li class="inline"><a class="links" href="admin.php">Logout</a></li>
 </ul>
 </div>

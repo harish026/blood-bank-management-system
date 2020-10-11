@@ -1,28 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<?php
-	session_start();
-function validatesession()
-{
-	if(!isset($_SESSION['LAST_ACTIVITY']))
-	{
-		echo"please Login Again";
-		exit("Session Expired Due To Your In activity");
-	}
-	if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 180))
-	{
-		session_unset();    
-		session_destroy();  
-		exit("Session Expired due to your Inactivity");
-	}
-	else
-	{
-		$_SESSION['LAST_ACTIVITY'] = time();
-	}
-}
-validatesession();
-?>
+
 <?php
 if( isset( $_POST['submit_form'] ) )
 {

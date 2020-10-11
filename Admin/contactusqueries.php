@@ -120,6 +120,9 @@ padding-left:10px;
 padding-bottom:10px;
 font-size:20px;
 }
+.leftmargin{
+	padding-left:100px
+}
 </style>
 <body>
 <div class="topheader">
