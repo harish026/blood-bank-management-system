@@ -49,7 +49,7 @@ font-size:25px;
 <ul>
 <li class="projectname">BloodBank Management System</li>
 <li class="inline"><a class="links" href="Admin/admin.php" target="_blank">Admin</a></li>
-<li class="inline"><a class="links" href="About.html">About</a></li>
+<li class="inline"><a class="links" href="About.php">About</a></li>
 <li class="inline"><a class="links" href="whybecomeadonor.php">Why Become Donor</a></li>
 <li class="inline"><a class="links" href="becomeadonor.html" >Become a Donor</a></li>
 <li class="inline"><a class="links" href="searchblood.html">Search Blood</a></li>
@@ -60,7 +60,21 @@ font-size:25px;
 <p><h1 style="font-size:40px;">Why Become a Donor</h1><p>
 <img src="why become a donor.jpg" style="float:right;height:400px;padding-right: 50px;">
 <p style="font-size:25px;">
-	Why Become Donor', 'donor', 'Blood is the most precious gift that anyone can give to another person the gift of life. A decision to donate your blood can save a life, or even several if your blood is separated into its components red cells, platelets and plasma which can be used individually for patients with specific conditions.<br><br>Double Red Blood Cells are most needed by patients after significant blood loss through trauma, surgery, or anemia.\r\nPlatelets help prevent uncontrolled bleeding and help patients with cancer, leukemia, and blood disorders. Plasma helps replace lost fluids and other blood products in burn victims, and more.
+	<?php
+	$pname='Why Become Donor';
+	$sql = "SELECT * from pages where (PageName='$pname')";
+	$host = 'localhost';
+	$user = 'root';
+	$pass = '';
+	$con=mysqli_connect($host, $user, $pass);
+	mysqli_select_db($con,'dbms');
+	$res = mysqli_query($con,$sql);
+	while($value=mysqli_fetch_array($res))
+	{
+			echo $value['detail'];
+		
+	}
+?>
 </p>
 
 <b style="font-size:30px;">Surprising Health Benefits of Donating Blood</b>

@@ -199,7 +199,7 @@ function clean_data($fdata) {
 	if($er==0)
 	{
 		$username=clean_data($_POST["username"]);
-		$password=md5(clean_data($_POST["curpsw"]));
+		$password=(clean_data($_POST["curpsw"]));
 		$sql = "SELECT * from admin where (UserName= '$username' and Password='$password')";
 		$host = 'localhost';
 		$user = 'root';
@@ -234,7 +234,7 @@ function clean_data($fdata) {
 					}
 					if($pmat==0)
 					{
-								$psw=md5($psw);
+								
 								$sql="update admin set Password='$psw' where UserName='$username'";
 								mysqli_query($con,$sql);
 								echo"<script>alert('Password updated Succesfully')</script>";
@@ -256,8 +256,8 @@ function clean_data($fdata) {
 <ul>
 <li class="projectname">BloodBank Management System</li>
 <li class="inline"><a class="links" href="admin.php" target="_blank">Admin</a></li>
-<li class="inline"><a class="links" href="http://localhost/iwp-project/About.html">About</a></li>
-<li class="inline"><a class="links" href="http://localhost/iwp-project/whybecomeadonor.html">Why Become Donor</a></li>
+<li class="inline"><a class="links" href="http://localhost/iwp-project/About.php">About</a></li>
+<li class="inline"><a class="links" href="http://localhost/iwp-project/whybecomeadonor.php">Why Become Donor</a></li>
 <li class="inline"><a class="links" href="http://localhost/iwp-project/becomeadonor.html" >Become a Donor</a></li>
 <li class="inline"><a class="links" href="http://localhost/iwp-project/searchblood.html">Search Blood</a></li>
 <li class="inline"><a class="links" href="http://localhost/iwp-project/contactus.php">Contact Us</a></li>
